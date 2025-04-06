@@ -1,0 +1,20 @@
+useEffect in React, which is another essential hook for managing side effects in functional components.
+
+What Are "Side Effects"?
+In programming, a side effect refers to any operation or action that modifies something outside the function's 
+scope or has an impact outside the immediate return value of the function. 
+In the context of React, side effects are operations that happen outside the React component's render cycle, such as:
+
+1. Fetching data from an API
+
+2. Manipulating the DOM directly (e.g., changing styles, adding event listeners)
+
+3. Updating global state or local storage
+
+4. Timers (setTimeout, setInterval)
+
+5. Subscriptions (e.g., WebSocket connections, event listeners)
+
+6. Logging data or interacting with external systems (like analytics)
+
+

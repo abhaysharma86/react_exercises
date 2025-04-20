@@ -10,7 +10,7 @@ const ToDoList = () => {
   return (
     <div>
       <h1>To-Do List</h1>
-      <button onClick={() => addItem("New Task")}>Add Task</button>
+      <button onClick={() => addItem("New Year")}>Add Task</button>
       <ul>
         {items.map((item, index) => (
           <li key={index}>{item}</li>

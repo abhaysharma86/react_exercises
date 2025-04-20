@@ -25,7 +25,18 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted", user);
+
+    const isFormIncomplete = Object.values(user).some(
+      (value) => value.trim() === ""
+    );
+
+    // user.name === "" || user.age === "" || user.email === ""
+
+    if (isFormIncomplete) {
+      console.log("Please fill the form");
+    } else {
+      console.log("Form Submitted:", user);
+    }
   };
 
   return (

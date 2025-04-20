@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [email, setEmail] = useState("");
+  // option: 1
+  // const [name, setName] = useState("");
+  // const [age, setAge] = useState("");
+  // const [email, setEmail] = useState("");
+
+  const [user, setUser] = useState({
+    name: "",
+    age: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    console.log(name + " : " + value);
+
+    setUser((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted", { name, age, email });
+    console.log("Form Submitted", user);
   };
 
   return (
@@ -16,8 +34,11 @@ const Form = () => {
         Name:
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)} // Update name state
+          // value={name}  with option 1
+          // onChange={(e) => setName(e.target.value)} // Update name state with option 1
+          value={user.name}
+          name="name"
+          onChange={handleChange}
         />
       </label>
       <br />
@@ -25,8 +46,11 @@ const Form = () => {
         Age:
         <input
           type="text"
-          value={age}
-          onChange={(e) => setAge(e.target.value)} // Update age state
+          // value={age} with option 1
+          // onChange={(e) => setAge(e.target.value)} // Update age state with option 1
+          value={user.age}
+          name="age"
+          onChange={handleChange}
         />
       </label>
       <br />
@@ -34,8 +58,11 @@ const Form = () => {
         Email:
         <input
           type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)} // Update email state
+          // value={email} with option 1
+          // onChange={(e) => setEmail(e.target.value)} // Update email state with option 1
+          value={user.email}
+          name="email"
+          onChange={handleChange}
         />
       </label>
       <br />

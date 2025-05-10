@@ -17,4 +17,8 @@ In the context of React, side effects are operations that happen outside the Rea
 
 6. Logging data or interacting with external systems (like analytics)
 
+7. Saving to localStorage
+
+
+
 

@@ -10,13 +10,14 @@ import ToDoList from './useStateComponent/ToDoList'
 import Form from './useStateComponent/Form'
 import LazyInitialization from './useStateComponent/LazyInitialization'
 import HandlingStateUpdatesBasedPreviousState from './useStateComponent/HandlingStateUpdatesBasedPreviousState'
+import UserList from './useEffectComponent/UserList'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ToDoList />
+      <UserList />
     </>
   )
 }
